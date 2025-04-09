@@ -74,3 +74,12 @@ export const getProfile = async (req: Request, res: Response): Promise<void> => 
 
   res.json({ user });
 };
+
+export const logout = (req: Request, res: Response): void => {
+  res.clearCookie('token', {
+    httpOnly: true,
+    secure: false,
+    sameSite: 'lax',
+  });
+  res.json({ message: 'Logged out successfully' });
+};
