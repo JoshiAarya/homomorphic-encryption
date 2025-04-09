@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors'; // ← Add this
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
-import jobDataRoutes from './routes/jobDataRoutes';
+
 
 dotenv.config();
 
@@ -15,7 +15,12 @@ app.use(cors({
 
 app.use(express.json());
 
+
+import jobDataRoutes from './routes/jobDataRoutes';
 app.use('/api/jobdata', jobDataRoutes);
+
+import authRoutes from './routes/authRoutes';
+app.use('/api/auth', authRoutes);
 
 connectDB();
 
