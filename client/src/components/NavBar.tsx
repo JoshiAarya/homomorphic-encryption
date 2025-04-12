@@ -17,31 +17,42 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-600 text-white px-6 py-4 shadow-md">
+    <nav className="bg-blue-700 text-white px-6 py-4 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-semibold tracking-wide">
+        <Link to="/" className="text-2xl font-bold tracking-wide hover:text-gray-200 transition-colors">
           Job Insights
         </Link>
-        <div className="space-x-6 flex items-center">
-          <Link to="/" className="hover:underline">Student Form</Link>
-          <Link to="/admin" className="hover:underline">Admin Dashboard</Link>
+        <div className="space-x-4 flex items-center text-sm font-medium">
+          <Link to="/" className="hover:text-gray-200 transition-colors">
+            Student Form
+          </Link>
+          <Link to="/admin" className="hover:text-gray-200 transition-colors">
+            Admin Dashboard
+          </Link>
+          <Link to="/predict" className="hover:text-gray-200 transition-colors">
+            Predict
+          </Link>
 
           {user ? (
             <>
-              <Link to="/profile" className="hover:underline">
+              <Link to="/profile" className="hover:text-gray-200 transition-colors">
                 {user.name.split(' ')[0]}'s Profile
               </Link>
               <button
                 onClick={handleLogout}
-                className="bg-white text-blue-600 px-3 py-1 rounded hover:bg-gray-100"
+                className="bg-white text-blue-700 px-3 py-1.5 rounded-md hover:bg-gray-100 transition-colors"
               >
                 Logout
               </button>
             </>
           ) : (
             <>
-              <Link to="/login" className="hover:underline">Login</Link>
-              <Link to="/signup" className="hover:underline">Sign Up</Link>
+              <Link to="/login" className="hover:text-gray-200 transition-colors">
+                Login
+              </Link>
+              <Link to="/signup" className="hover:text-gray-200 transition-colors">
+                Sign Up
+              </Link>
             </>
           )}
         </div>

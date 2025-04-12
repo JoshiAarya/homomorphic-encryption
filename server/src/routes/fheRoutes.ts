@@ -1,10 +1,7 @@
-// routes/fheRoutes.ts
-import express from 'express';
-import { sendUserData, fetchPrediction } from '../controllers/fheClientController';
+import { Router } from "express";
+import { sendAndGetPrediction } from "../controllers/fheClientController";
 
-const router = express.Router();
-
-router.post('/submit', sendUserData);
-router.get('/fetch', fetchPrediction);
+const router = Router();
+router.post("/sendandgetprediction", sendAndGetPrediction);
 
 export default router;
