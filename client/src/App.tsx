@@ -7,6 +7,8 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import { AuthProvider } from './context/AuthContext';
 import FhePredictionForm from './components/FhePredictionForm';
+import Dashboard from './pages/Dashboard';
+import PredictionPage from './pages/PredictionPage';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/predict" element={<FhePredictionForm />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/performance" element={<PredictionPage />} />
         </Routes>
       </Router>
     </AuthProvider>

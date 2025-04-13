@@ -26,6 +26,8 @@ app.use('/api/auth', authRoutes);
 import fheRoutes from './routes/fheRoutes';
 app.use('/api/fhe', fheRoutes);
 
+import predictionRoutes from './routes/predictionRoutes';
+app.use('/api/prediction', predictionRoutes);
 
 connectDB();
 

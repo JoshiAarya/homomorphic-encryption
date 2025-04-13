@@ -23,14 +23,17 @@ const Navbar = () => {
           Job Insights
         </Link>
         <div className="space-x-4 flex items-center text-sm font-medium">
-          <Link to="/" className="hover:text-gray-200 transition-colors">
-            Student Form
+          <Link to="/dashboard" className="hover:text-gray-200 transition-colors">
+            Dashboard
           </Link>
-          <Link to="/admin" className="hover:text-gray-200 transition-colors">
+          {/* <Link to="/admin" className="hover:text-gray-200 transition-colors">
             Admin Dashboard
-          </Link>
+          </Link> */}
           <Link to="/predict" className="hover:text-gray-200 transition-colors">
             Predict
+          </Link>
+          <Link to="/performance" className="hover:text-gray-200 transition-colors">
+            Performance Analysis
           </Link>
 
           {user ? (
